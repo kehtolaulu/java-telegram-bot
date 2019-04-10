@@ -77,7 +77,7 @@ public class TestItisBot extends TelegramLongPollingBot {
 
         if (update.hasCallbackQuery()) {
             try {
-                execute(new SendMessage().setText(
+                execute(message.setText(
                         update.getCallbackQuery().getData())
                         .setChatId(update.getCallbackQuery().getMessage().getChatId()));
             } catch (TelegramApiException e) {
